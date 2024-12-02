@@ -18,7 +18,6 @@ async function status(request, response) {
   const databaseOpenedConnectionsValue =
     databaseOpenedConnections.rows[0].count;
 
-  console.log(process.env.NODE_ENV);
   /*console.log(databaseVersion.rows[0].server_version);
   console.log(databaseMaxConnections.rows[0].max_connections);
   console.log(databaseOpenedConnections);*/
