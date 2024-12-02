@@ -41,5 +41,10 @@ function getSSLValues() {
     };
   }
 
+  if (process.env.NODE_ENV === "preview") {
+    // Retorne o valor esperado para o ambiente "preview"
+    return false; // ou true, dependendo do que você precisa
+  }
+
   return process.env.NODE_ENV === "production" ? true : false;
 }
