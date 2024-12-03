@@ -27,7 +27,6 @@ test("Verifica se as credenciais do banco foram atribuidas para o ambiente de te
     process.env.POSTGRES_PASSWORD,
     process.env.POSTGRES_DB,
   ];
-  console.log(dbCredentials);
 
   dbCredentials.forEach((credential) => {
     expect(credential).toBeDefined();
