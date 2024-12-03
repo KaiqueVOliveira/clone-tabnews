@@ -46,5 +46,5 @@ function getSSLValues() {
     return false; // ou true, dependendo do que você precisa
   }
 
-  return process.env.NODE_ENV === "production" ? true : false;
+  return process.env.NODE_ENV === "production" ? false : false;
 }
