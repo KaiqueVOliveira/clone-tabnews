@@ -25,6 +25,7 @@ async function getNewClient() {
   });
   console.log(client);
   console.log("exibe o ambiente", process.env.NODE_ENV);
+  console.log("Ambiente Vercel:", process.env.VERCEL_ENV);
   await client.connect();
   return client;
 }
