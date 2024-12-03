@@ -24,7 +24,7 @@ async function getNewClient() {
     ssl: getSSLValues(),
   });
   console.log(client);
-  console.log(process.env.NODE_ENV);
+  console.log("exibe o ambiente", process.env.NODE_ENV);
   await client.connect();
   return client;
 }
@@ -41,10 +41,5 @@ function getSSLValues() {
     };
   }
 
-  if (process.env.NODE_ENV === "preview") {
-    // Retorne o valor esperado para o ambiente "preview"
-    return false; // ou true, dependendo do que você precisa
-  }
-
-  return process.env.NODE_ENV === "production" ? false : false;
+  return process.env.NODE_ENV === "production" ? true : false;
 }
